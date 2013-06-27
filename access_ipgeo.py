@@ -11,7 +11,7 @@ def parseLog(logfile, outfile):
 	#Options
 	LOG_ACCESS_DATA = False
 	PRINT_PROGRESS = True
-	IPINFODB_API_KEY = 'f000436b7714a511be07d78f7335870574948dd56dc4d433f031459ab2cb8a07'
+	IPINFODB_API_KEY = ''
 	apache_log_format = r'%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"'
 
 	p = apachelog.parser(apache_log_format)
@@ -73,5 +73,3 @@ def parseLog(logfile, outfile):
 logfile = 'access_log-20130609.txt'
 output = 'parsed_log_test.json'
 parseLog(logfile, output)
-
-#http://stackoverflow.com/questions/492519/timeout-on-a-python-function-call
